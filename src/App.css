@@ -1,0 +1,249 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0066cc; /* Blue theme */
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar-logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+  font-size: 1.2rem;
+}
+
+.navbar-link:hover {
+  background-color: #555;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Main Content Container */
+.main-content-container {
+  width: 100%;
+  max-width: 1200px; /* Max width for large screens */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling for Item List and Edit Item */
+.home-page, .edit-item-header, .add-item-header {
+  background-color: #0066cc; /* Blue background */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 2.5rem; /* Larger font size */
+  font-weight: bold;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Container Box */
+.form-container {
+  background-color: #ffffff; /* White background for form */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+.item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item-form label {
+  font-size: 1rem;
+  color: #333;
+}
+
+.item-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.item-form input:focus {
+  outline: none;
+  border: 1px solid #0066cc; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+}
+
+.item-form button {
+  padding: 12px 20px;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make the button fill its container */
+  max-width: 250px; /* Max width to maintain uniformity */
+  margin: 0 auto; /* Center align */
+}
+
+.item-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Item List and Cards - Layout Changes */
+.item-list {
+  padding: 20px;
+  background-color: #ffffff; /* White background for the item list container */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-list .item-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Push content to the top */
+  position: relative;
+  margin: 10px; /* Add margin between cards */
+  min-height: 200px; /* Ensures a minimum height for the card */
+}
+
+.item-list .item-card h2 {
+  color: #333;
+  margin-top: 0;
+  font-size: 1.2rem; /* Adjust font size for cards */
+}
+
+.item-list .item-card p {
+  font-size: 1rem; /* Set a consistent font size */
+  color: #666;
+  flex-grow: 1; /* Allow description to take up remaining space */
+  overflow-wrap: break-word; /* Prevent text overflow */
+}
+
+/* Buttons (Delete and Edit) */
+.item-list .item-card .delete-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px; /* Place at left bottom of the card */
+  background-color: #e74c3c; /* Red background for delete button */
+  color: white;
+  padding: 5px 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 12px; /* Adjust button font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 40%;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.item-list .item-card .delete-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+.item-list .item-card .primary-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px; /* Place at right bottom of the card */
+  background-color: #007bff; /* Blue button */
+  color: white;
+  padding: 5px 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 12px; /* Adjust button font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 40%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.item-list .item-card .primary-button:hover {
+  background-color: #0056b3;
+}
+
+/* Display Cards in Grid (Left to Right) */
+.item-list .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align left */
+  gap: 20px; /* Add gap between cards */
+}
+
+.item-list .cards-container .item-card {
+  flex: 1 1 300px; /* Flex-grow and flex-basis to make cards responsive */
+}
+
+/* Adjustments for Small Screens (Mobile Responsiveness) */
+@media (max-width: 768px) {
+  .item-list .cards-container {
+    flex-direction: column; /* Stack cards vertically on small screens */
+  }
+
+  .item-card {
+    width: 90%; /* Adjust card width on small screens */
+    max-width: none; /* Remove max-width restriction */
+  }
+
+  .item-list .item-card h2 {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .item-list .item-card p {
+    font-size: 0.9rem; /* Adjust description font size for smaller screens */
+  }
+
+  .item-list .item-card .delete-button,
+  .item-list .item-card .primary-button {
+    font-size: 12px; /* Smaller button font size for mobile */
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+  }
+}
